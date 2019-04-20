@@ -20,11 +20,6 @@ const start = (callback: msgCallback): void => {
 const wait = (ms: number): Promise<void> => new Promise((res) => setInterval(res, ms));
 
 const startAsync = async (callback: msgCallback): Promise<void> => {
-
-  for (let i = 0; i < 100; i--) {
-    // do nothing
-  }
-
   await wait(1000);
   callback("hello");
   await wait(1000);
